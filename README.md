@@ -1,44 +1,55 @@
-🧭 Kayak — Smart Trip Recommender
+# **🧭 Kayak — Smart Trip Recommender**
+A data-driven prototype to inspire your next getaway.
 
-This project explores how real-time data can enhance travel recommendations by identifying the best destinations to visit in France, based on both weather conditions and hotel quality.
+### **Overview**
+This project explores how real-time data can enhance the travel experience by identifying the best places to visit in France, based on a combination of weather conditions and hotel quality.
 
-It was developed as a proof of concept for Kayak, the travel search platform, to help users choose not just how to travel — but where to go, and when.
+Designed as a proof of concept for Kayak, the travel search platform, it aims to go beyond price comparisons — helping users decide where to go, and when.
 
-Users often hesitate when planning trips: they want to make the right choice, and they want trusted, relevant information. By combining live weather forecasts and hotel reviews, I designed a system that dynamically highlights the most attractive cities to visit — at any given moment.
+### **Why this project?**
+Trip planning is exciting… but also overwhelming. Most people hesitate because they lack trusted, relevant, and personalized information.
 
-The project focused on 35 of the most iconic destinations in France, aiming to answer a simple but powerful question:
+To address this, I created a system that combines live weather forecasts and hotel reviews to dynamically highlight the most attractive destinations — in real time.
+
+Whether you're chasing sunshine or charming cities, the goal is to answer one simple question:
+
 Where should I go next weekend, and which hotel should I book?
 
-How it works :
+### **How it works**
+This smart recommender is built on a robust data pipeline that combines multiple components:
 
-To build this recommendation system, I combined several components:
+🔸 Weather data
+→ Retrieved using OpenWeatherMap with geographic coordinates from Nominatim
 
-- Weather data: Pulled using OpenWeatherMap and city coordinates from Nominatim
-- Hotel data: Scraped directly from Booking.com (names, ratings, descriptions, and locations)
-- Data pipeline: Raw data stored in AWS S3 and cleaned and structured into a PostgreSQL database hosted on AWS RDS
-- Visualization tools: Interactive maps built with Plotly, allowing dynamic exploration of destinations and hotels
+🔸 Hotel data
+→ Scraped directly from Booking.com, including names, locations, ratings, and descriptions
 
-Smart Recommendations
+🔸 Data pipeline
+→ Raw data stored in AWS S3, then processed and structured in a PostgreSQL database hosted on AWS RDS
 
-The app surfaces:
+🔸 Visualization
+→ Interactive maps created with Plotly for intuitive and dynamic exploration
 
-Cities with the best weather forecast over the next 7 days (based on criteria like rainfall, temperature, humidity, etc.)
+### **Smart Recommendations**
+The application analyzes and ranks destinations using real-time weather metrics such as:
 
-Top-rated hotels in those areas, filtered by user score and location
+Rainfall probability
 
-This allows users to easily identify where the weather will be nicest — and where the best places to stay are — in just a few clicks.
+Temperature
 
-Focus: France’s Top 35 Cities
-The recommendation engine was limited to a curated list of French cities — from Paris, Lyon, and Marseille to charming towns like Colmar, Eguisheim, or Bormes-les-Mimosas.
+Humidity
 
-This made it possible to fine-tune the scoring and ensure data quality while offering a wide range of travel styles and regions.
+It then pairs those insights with top-rated hotels in each location, making it easy to identify the most appealing destinations — and where to stay once you're there.
 
-Preview
+🗺️ Focus Area: France 🇫🇷
+The system was applied to a curated list of 35 iconic French cities, including: Paris, Lyon, Marseille, Colmar, Annecy, Biarritz, Eguisheim, Bormes-les-Mimosas, and many more.
 
-Two interactive maps were created:
+This scope allowed for a diverse range of styles and regions — from cultural capitals to coastal escapes — while ensuring high data quality and personalization.
 
-- Top 5 travel destinations for the coming week
-- Top 20 hotels across all destinations
+### **Preview**
+Two interactive maps were designed as part of the project:
 
+- 🏆 Top 5 destinations to travel in the next 7 days
+- 🏨 Top 20 hotels across all destinations
 
-These help visualize patterns and offer an intuitive way to explore options.
+These visualizations help users explore travel options intuitively and make decisions based on current conditions.
