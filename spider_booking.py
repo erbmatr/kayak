@@ -8,7 +8,7 @@ import json
 class BookingSpider(scrapy.Spider):
     name = "booking_spider"
     
-    city_list = ['Aigues Mortes', 'Aix en Provence', 'Avignon', 'Carcassonne', 'Cassis', 'Marseille', 'Saintes Maries de la mer']
+    city_list = ['Aix en Provence', 'Carcassonne', 'Cassis', 'Marseille', 'Saintes Maries de la mer']
     
     
     def start_requests(self):
