@@ -1,15 +1,15 @@
-# **🧭 Kayak — Smart Trip Recommender**
+# **🧭 Kayak smart trip recommender**
 A data-driven prototype to inspire your next getaway.
 
 ### **Overview**
-This project explores how real-time data can enhance the travel experience by identifying the best places to visit in France, based on a combination of weather conditions and hotel quality.
+This project explores how data can enhance the travel experience by identifying the best places to visit in France, based on a combination of weather conditions and hotel quality.
 
-Designed as a proof of concept for Kayak, the travel search platform, it aims to go beyond price comparisons — helping users decide where to go, and when.
+Designed as a proof of concept for Kayak, the travel search platform, it aims to go beyond price comparisons helping users decide where to go, and when.
 
 ### **Why this project?**
 Trip planning is exciting… but also overwhelming. Most people hesitate because they lack trusted, relevant, and personalized information.
 
-To address this, I created a system that combines live weather forecasts and hotel reviews to dynamically highlight the most attractive destinations — in real time.
+To address this, I created a system that combines live weather forecasts and hotel reviews to dynamically highlight the most attractive destinations.
 
 Whether you're chasing sunshine or charming cities, the goal is to answer one simple question:
 
@@ -22,7 +22,7 @@ This smart recommender is built on a robust data pipeline that combines multiple
 → Retrieved using OpenWeatherMap with geographic coordinates from Nominatim
 
 🔸 Hotel data
-→ Scraped directly from Booking.com, including names, locations, ratings, and descriptions
+→ Scraped directly from "booking.com", including names, locations, ratings, descriptions...
 
 🔸 Data pipeline
 → Raw data stored in AWS S3, then processed and structured in a PostgreSQL database hosted on AWS RDS
@@ -30,21 +30,21 @@ This smart recommender is built on a robust data pipeline that combines multiple
 🔸 Visualization
 → Interactive maps created with Plotly for intuitive and dynamic exploration
 
-### **Smart Recommendations**
-The application analyzes and ranks destinations using real-time weather metrics such as:
+### **Smart recommendations**
+The application analyzes and ranks destinations using weather metrics such as:
 
-Rainfall probability
+- Rainfall probability
+- Temperature
+- Humidity
+- Wind
+- Cloud
 
-Temperature
+It then pairs those insights with top-rated hotels in each location, making it easy to identify the most appealing destinations and where to stay once you're there.
 
-Humidity
+Focus area: France
 
-It then pairs those insights with top-rated hotels in each location, making it easy to identify the most appealing destinations — and where to stay once you're there.
-
-🗺️ Focus Area: France 🇫🇷
 The system was applied to a curated list of 35 iconic French cities, including: Paris, Lyon, Marseille, Colmar, Annecy, Biarritz, Eguisheim, Bormes-les-Mimosas, and many more.
-
-This scope allowed for a diverse range of styles and regions — from cultural capitals to coastal escapes — while ensuring high data quality and personalization.
+This scope allowed for a diverse range of styles and regions from cultural capitals to coastal escapes while ensuring high data quality and personalization.
 
 ### **Preview**
 Two interactive maps were designed as part of the project:
